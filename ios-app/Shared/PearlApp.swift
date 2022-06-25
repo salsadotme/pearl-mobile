@@ -25,7 +25,6 @@ class AppDelegate: NSObject, UIApplicationDelegate, MessagingDelegate {
         if let fcmToken = fcmToken {
             print("Firebase registration token: \(fcmToken)")
             let dataDict: [String: String] = ["token": fcmToken]
-            PushNotificationManager.subscribe()
             NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
         }
     }
@@ -38,7 +37,7 @@ struct PearlApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ToggleView()
                 .onAppear {
                     PushNotificationManager.registerForRemoteNotifications {
                         print("yay!")

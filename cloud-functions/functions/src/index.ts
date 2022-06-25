@@ -5,18 +5,18 @@ import {admin} from "./deps/firebase";
 export interface PushPayload {
   title: string;
   content: string;
-  topic: string;
 }
 
-export const push = functions.runWith({
-  invoker: "public",
-}).https.onRequest((request, response) => {
-  functions.logger.info("Hello logs!", {structuredData: true});
-  response.send("Hello from Firebase!");
-
-  const topic = "all";
-  const payload: PushPayload = {title: "Hello World", content: "foobar", topic: topic};
-
+export const push = functions.https.onRequest(async (request, response) => {
+  const project = request.query.project;
+  const type = request.query.type;
+  const title = request.query.title as string;
+  const content = request.query.content as string;
+  const topic = `${project}-${type}`;
+  const payload: PushPayload = {
+    title: title,
+    content: content,
+  };
   const message: MessagingPayload = {
     notification: {
       title: payload.title,
@@ -24,5 +24,6 @@ export const push = functions.runWith({
       key: "1",
     },
   };
-  admin.messaging().sendToTopic(topic, message);
+  const messageId = await admin.messaging().sendToTopic(topic, message);
+  response.status(200).send(`Send message with ID: ${messageId} to topic ${topic}!`);
 });
