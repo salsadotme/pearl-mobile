@@ -10,9 +10,9 @@ import SDWebImageSwiftUI
 
 let fakeData: [NotificationData] = [
     NotificationData(id: "1", title: "Hello World 1", content: "Yet another Messaging Protocol", senderProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/977496875887558661/L86xyLF4_400x400.jpg")!),
-    NotificationData(id: "1", title: "Hello World 2", content: "Yet another Messaging Protocol", senderProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/977496875887558661/L86xyLF4_400x400.jpg")!),
-    NotificationData(id: "1", title: "Hello World 3", content: "Yet another Messaging Protocol", senderProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/977496875887558661/L86xyLF4_400x400.jpg")!),
-    NotificationData(id: "1", title: "Hello World 4", content: "Yet another messaging protocol", senderProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/977496875887558661/L86xyLF4_400x400.jpg")!),
+    NotificationData(id: "2", title: "Hello World 2", content: "Yet another Messaging Protocol", senderProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/977496875887558661/L86xyLF4_400x400.jpg")!),
+    NotificationData(id: "3", title: "Hello World 3", content: "Yet another Messaging Protocol", senderProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/977496875887558661/L86xyLF4_400x400.jpg")!),
+    NotificationData(id: "4", title: "Hello World 4", content: "Yet another messaging protocol", senderProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/977496875887558661/L86xyLF4_400x400.jpg")!),
 ]
 
 private func cell(_ model: NotificationData) -> some View {

@@ -1,11 +1,13 @@
 {
   "images" : [
     {
+      "filename" : "ios-logo40w.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
+      "filename" : "ios-logo60w.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
@@ -31,11 +33,13 @@
       "size" : "40x40"
     },
     {
+      "filename" : "ios-logo120w.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
+      "filename" : "ios-logo180w.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
@@ -69,6 +73,11 @@
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"
+    },
+    {
+      "idiom" : "ipad",
+      "scale" : "1x",
+      "size" : "76x76"
     },
     {
       "idiom" : "ipad",
