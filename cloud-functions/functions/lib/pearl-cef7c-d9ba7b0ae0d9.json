@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "projectId": "pearl-cef7c",
+    "private_key_id": "d9ba7b0ae0d9dd199f94fb74e1728ef38ba4bdc9",
+    "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC6r+1j4p0xPJex\np/uuBqmUG32AmkzNvJ3nVoxuUvx6OTqgvPNQvy/+EHk7nDzn2DFKXkP0QeeZAr67\nosrLn7d8hydl1ODV8wskVDf9DEd45rcNEiGr9xkO6fOz4ztXeLXiJpoIh2fz7l14\nBR92rV5NNUvqImkovuIine9IcKhdrNwYXNV5CLwlDa1ZBwyN25B+rAFwOrEliFMT\nJkL/yCwkOasMCkE4/Q61RTpK8U/4YMp+3RyCY3/B1/hN+ZRPsX+UnhB9/IKGE6Yh\nGqLH5yXAucLF0YlY4fh12GyBaYduumAjO7Kw9JM7UgbUx73AlpCQtssSa9AkDnrM\nelbxJr+JAgMBAAECggEAD5seTp/GgTOuAKFoxiLzcRidNK9xZS9zyb9v7NcOGQ+I\nqaAx/NmGowfwgn2sj7sAX9Wie5w4xo82r4vLxRrcZVINBpO1mdz/3PEXXxV0MhSj\nT7noy63Tz+3Zu/tuXgEOv1F3xee/1mHiOWLAPxT+EZk3d+KZhNj0IW2vb5BPWskw\nbbSbrwTzHHxTeaC06k6KYikTCYJzCrjU0uoRuHaATRzB6Lyc6BerZhDiriVqOf7x\nEaBORBTZMdzHNTysMPZnvkEyVFJFV3kMm4UWsxoDjqI6hySGUvUQRyidJS3/fzMm\nstBS2haRMdDFn6sOOJIPScP1qAwU53y0FL9blvy5SQKBgQDcoFUJOwOdbVKBysrw\nvWL6benXaSw21tqBRRoLyaUk3UKmqC/KGEzPc+rjJ+MZYYcqYYApmyc/wBkPYrdU\nsBUrLr0gqE7ZYSt8uuwSky2tZt0pYgRhB2dEgvtgxCq3eD42j/lPVqgDM1itheWB\nbN2jrgsVmNhOIRED9fut9/OoJQKBgQDYno5bS2DFZmFiRsFyAPQaY93LbC1E6Zav\n3mhVd2fYuw7k6z9ATlaZf+iXtrZA5aA3iLQUFeNWPVNKrGpAS3LlRWHPH8jTVAmL\nklqqFZ3wmVQZSmzyI0s3VngxP4o/JKU9vXQrTnUQDF4230/dcJBZO5UwiHiqMdR6\n/7w1Zg+6lQKBgQCj8TQfPs4J3mGP9txklaaGBsTb/9gODAukQXAAUF+6C/xqENIq\nL3JsOWvSTiJwCsvAz2DICfXZZmp4x1cJxCqGwx1gthCZcZ45+kBP8TPhBW3UQXSV\nkUXIYDhhiINhgCVisAuHTBJfBnmfv75yNS5hYYP1EXWyYNnfApt5g6V4TQKBgGqe\neBEFY+clQi9+Bf7X604F84gJgaqWkn2TqaTPdcSeJXGVPHepV0SMSW5LFx+QJjDP\nT1tHfrLW0mVBwbZNrIqegMrSqSUjCuOwsIFgzHE89sDP+hmgN4hQPi53SNNVdSOT\nWVdrcYDppYG6nnOu0M2q3v6ZXVLf3eaAcyGRT5KVAoGBAM+ri2jXxN+VkClY3ryV\n6bm1/DoOxSn0zy3VLB9J0OcWpNCb6GmyVgvJ5wO6kU+8ap/qiVKMYJbvgSezfXnw\noGBWnEpsQQI7EST9JqIXn3NW5I3bTKes068vEjmsPeVR/6G96X5UAAhA/bIx721I\nK8/VH5ka8R3WI2elYzkw0ce5\n-----END PRIVATE KEY-----\n",
+    "clientEmail": "pearl-emulator@pearl-cef7c.iam.gserviceaccount.com",
+    "client_id": "104464423481472118649",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/pearl-emulator%40pearl-cef7c.iam.gserviceaccount.com"
+}
