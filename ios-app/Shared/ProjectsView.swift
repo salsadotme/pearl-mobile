@@ -18,9 +18,9 @@ struct Project: Hashable {
 
 let projects: [Project] = [
     Project(id: "1", title: "Bullish Bears", content: "Yet another Messaging Protocol", projectProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/977496875887558661/L86xyLF4_400x400.jpg")!),
-    Project(id: "2", title: "Illuminati", content: "Yet another Messaging Protocol", projectProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/977496875887558661/L86xyLF4_400x400.jpg")!),
-    Project(id: "3", title: "Crypto Dates", content: "Yet another Messaging Protocol", projectProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/977496875887558661/L86xyLF4_400x400.jpg")!),
-    Project(id: "4", title: "FWB", content: "Yet another messaging protocol", projectProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/977496875887558661/L86xyLF4_400x400.jpg")!),
+    Project(id: "2", title: "Illuminati", content: "Yet another Messaging Protocol", projectProfilePhoto: URL(string: "https://pbs.twimg.com/media/FV4bX_bXkAUJGRu?format=jpg&name=4096x4096")!),
+    Project(id: "3", title: "Crypto Dates", content: "Yet another Messaging Protocol", projectProfilePhoto: URL(string: "https://i.imgur.com/v4S8w7k.jpg")!),
+    Project(id: "4", title: "FWB", content: "Yet another messaging protocol", projectProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/1460869637139271680/d0X1drlC_400x400.jpg")!),
 ]
 
 struct ProjectsView: View {
@@ -39,8 +39,7 @@ struct ProjectsView: View {
                     WebImage(url: project.projectProfilePhoto)
                         .resizable()
                         .indicator(.activity)
-                        .animation(.easeInOut(duration: 0.5))
-                        .transition(.fade)
+                        .transition(.fade(duration: 0.5))
                         .scaledToFill()
                         .frame(width: 40.0, height: 40.0, alignment: .center)
                         .clipShape(Circle())

@@ -62,31 +62,27 @@ struct ToggleView: View {
     
     var body: some View {
         VStack {
-            Group {
-                toggleCell(title: "I want to receive notifications for this project", isOn: $projectToggle)
-                    .padding(.vertical)
-                Divider()
-                    .padding(.horizontal, 10)
+            toggleCell(title: "I want to receive notifications for this project", isOn: $projectToggle)
+                .padding(.vertical)
+            Divider()
+                .padding(.horizontal, 10)
+                .padding(.top, 10)
+                .padding(.horizontal, 29)
+            Text("Select the type of notifications you’d like to receive (you can change this later)")
+                .font(.system(size: 17, weight: .light, design: .default))
+                .frame(alignment: .leading)
+            VStack {
+                toggleCell(title: "New Drop", isOn: $model.newDropsToggle)
+                toggleCell(title: "Mint allowlist", isOn: $model.allowlistToggle)
+                toggleCell(title: "Utility announcements", isOn: $fakeToggle)
+                toggleCell(title: "Jobs", isOn: $fakeToggle)
+                toggleCell(title: "News coverage", isOn: $fakeToggle)
+                toggleCell(title: "Security", isOn: $fakeToggle)
+                toggleCell(title: "Global announcements", isOn: $fakeToggle)
             }
-            .padding(.top, 10)
-            .padding(.horizontal, 29)
-            
-            List {
-                Section {
-                    toggleCell(title: "New Drop", isOn: $model.newDropsToggle)
-                    toggleCell(title: "Mint allowlist", isOn: $model.allowlistToggle)
-                    toggleCell(title: "Utility announcements", isOn: $fakeToggle)
-                    toggleCell(title: "Jobs", isOn: $fakeToggle)
-                    toggleCell(title: "News coverage", isOn: $fakeToggle)
-                    toggleCell(title: "Security", isOn: $fakeToggle)
-                    toggleCell(title: "Global announcements", isOn: $fakeToggle)
-                } header: {
-                    Text("Select the type of notifications you’d like to receive (you can change this later)")
-                        .font(.system(size: 17, weight: .light, design: .default))
-                }
-                .listRowBackground(Color.clear)
-            }
+            Spacer()
         }
+        .padding(.horizontal, 20)
         .navigationTitle(title)
         .navigationBarTitleDisplayMode(.inline)
         .background(
