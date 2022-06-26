@@ -38,7 +38,6 @@ struct ProjectsView: View {
                 HStack(alignment: .center) {
                     WebImage(url: project.projectProfilePhoto)
                         .resizable()
-                        .indicator(.activity)
                         .transition(.fade(duration: 0.5))
                         .scaledToFill()
                         .frame(width: 40.0, height: 40.0, alignment: .center)
