@@ -61,7 +61,9 @@ struct ContentView: View {
     var body: some View {
         VStack {
             ForEach(fakeData, id: \.id) { data in
-                cell(data)
+                NavigationLink(destination: NotificationDetailsView(notification: data)) {
+                    cell(data)
+                }
             }
             Spacer()
         }

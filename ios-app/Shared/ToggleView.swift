@@ -39,11 +39,7 @@ struct ToggleView: View {
     
     private let title: String
     init(title: String) {
-        UITableView.appearance().backgroundColor = .clear
-        UITableViewCell.appearance().backgroundColor = .clear
-        
         Theme.navigationBarColors(background: .clear, titleColor: .white)
-        
         self.model = SubscriptionModel()
         self.title = title
     }
