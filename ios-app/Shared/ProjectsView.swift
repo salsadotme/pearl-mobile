@@ -33,7 +33,7 @@ struct ProjectsView: View {
     }
     
     func cell(project: Project, isLast:Bool) -> some View {
-        NavigationLink(destination: ToggleView()) {
+        NavigationLink(destination: ToggleView(title: project.title)) {
             VStack (alignment: .center, spacing: 0) {
                 HStack(alignment: .center) {
                     WebImage(url: project.projectProfilePhoto)

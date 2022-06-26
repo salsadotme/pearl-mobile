@@ -37,13 +37,15 @@ struct ToggleView: View {
     @State private var projectToggle = true
     @State private var fakeToggle = true
     
-    init() {
+    private let title: String
+    init(title: String) {
         UITableView.appearance().backgroundColor = .clear
         UITableViewCell.appearance().backgroundColor = .clear
         
         Theme.navigationBarColors(background: .clear, titleColor: .white)
         
         self.model = SubscriptionModel()
+        self.title = title
     }
     
     private func toggleCell(title: String, isOn: Binding<Bool>) -> some View {
@@ -61,9 +63,6 @@ struct ToggleView: View {
     var body: some View {
         VStack {
             Group {
-                Text("Bullish Bears")
-                    .font(.system(size: 20, weight: .regular, design: .default))
-                    .frame(maxWidth: .infinity, maxHeight: 30, alignment: .leading)
                 toggleCell(title: "I want to receive notifications for this project", isOn: $projectToggle)
                     .padding(.vertical)
                 Divider()
@@ -88,7 +87,7 @@ struct ToggleView: View {
                 .listRowBackground(Color.clear)
             }
         }
-        .navigationTitle("Preferences")
+        .navigationTitle(title)
         .navigationBarTitleDisplayMode(.inline)
         .background(
             RadialGradient(gradient: Gradient(colors: [Color(hex: 0x006D75), Color(hex: 0x00474F), Color(hex: 0x22075E)]), center: .topLeading, startRadius: 250, endRadius: 800)
@@ -101,6 +100,6 @@ struct ToggleView: View {
 
 struct ToggleView_Previews: PreviewProvider {
     static var previews: some View {
-        ToggleView()
+        ToggleView(title: "FooFii")
     }
 }
