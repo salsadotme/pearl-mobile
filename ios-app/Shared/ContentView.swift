@@ -77,8 +77,9 @@ struct ContentView: View {
                     print(querySnapshot!.count)
                     messages.removeAll()
                     for document in querySnapshot!.documents {
-                        //print("\(document.documentID) => \(document.data())")
-                        messages.append(NotificationData(id: document.documentID, title: document.get("title") as! String, content: document.get("body") as! String, senderProfilePhoto: URL(string:  "https://pbs.twimg.com/media/FV4bX_bXkAUJGRu?format=jpg&name=4096x4096")!))
+                        let maybePhoto = document.get("senderProfilePhoto")
+                        let photo = maybePhoto != nil ? URL(string: maybePhoto as! String) : URL(string: "")
+                        messages.append(NotificationData(id: document.documentID, title: document.get("title") as! String, content: document.get("body") as! String, senderProfilePhoto: photo!))
                     }
                 }
             }
