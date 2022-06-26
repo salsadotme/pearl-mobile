@@ -26,7 +26,7 @@ struct NotificationDetailsView: View {
                         .font(.system(size: 17, weight: .bold))
                     Spacer()
                 }
-                Text("Words cannot express how proud we are to have been selected as the launch partner of Sofia’s NFT Club, an initiative led by Sofia Vergara and LatinWe! \n\nSofia’s NFT Club was launched to educate new audiences about web3 and will do a deep dive into one NFT project each month; and May is the month of Angels! \n\nLearn more about our partnership and how you can participate. ")
+                Text("GM Bears, we know you’ve been busy hacking this weekend. You pushed code instead of pulling a date, skipped drinks for coffees at 3am and missed your favourite DJs. But don’t you worry. The Bear team has got you covered.\n\nAll Bear holders are invited to our afterparty. Location will be sent through Pearl at 6pm. If you know you know 🐻")
             }
             .padding()
             .overlay(

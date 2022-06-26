@@ -70,6 +70,7 @@ struct ContentView: View {
         db.collection("recipients")
             .document("0x06e6f7D896696167B2dA9281EbAF8a14580fbFCc")
             .collection("messages")
+            .order(by: "sentAt", descending: true)
             .getDocuments() { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
