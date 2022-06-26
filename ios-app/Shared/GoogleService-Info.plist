@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>669209140300-m8rmvoug0raj7osure16n1ov2er46ik7.apps.googleusercontent.com</string>
+	<string>1062339255867-9n7b1sg72g1gad9fq1svo7kvds7om4qt.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.669209140300-m8rmvoug0raj7osure16n1ov2er46ik7</string>
+	<string>com.googleusercontent.apps.1062339255867-9n7b1sg72g1gad9fq1svo7kvds7om4qt</string>
 	<key>API_KEY</key>
-	<string>AIzaSyArcwgaDRBWrubouR9MWbiaWbx_rc2bu5o</string>
+	<string>AIzaSyDEbn3McNxNyIewPhR2uucpQBJt2cIdj_M</string>
 	<key>GCM_SENDER_ID</key>
-	<string>669209140300</string>
+	<string>1062339255867</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>pearl.com.Pearl</string>
 	<key>PROJECT_ID</key>
-	<string>pearl-cef7c</string>
+	<string>pearl-dev-f60a5</string>
 	<key>STORAGE_BUCKET</key>
-	<string>pearl-cef7c.appspot.com</string>
+	<string>pearl-dev-f60a5.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:669209140300:ios:e19674677c1e1db42ee8e9</string>
+	<string>1:1062339255867:ios:f3f1e972ed6652b89e861e</string>
 </dict>
 </plist>
