@@ -15,6 +15,15 @@
 		5630B1AD2867689C004D29F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5630B1AB2867689C004D29F4 /* GoogleService-Info.plist */; };
 		5630B1B428677DCD004D29F4 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5630B1B328677DCD004D29F4 /* ToggleView.swift */; };
 		5630B1B528677DCD004D29F4 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5630B1B328677DCD004D29F4 /* ToggleView.swift */; };
+		5677F3DC2867D88E00A0466D /* WalletConnectSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5677F3DB2867D88E00A0466D /* WalletConnectSwift */; };
+		5677F3DE2867DA4800A0466D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5677F3DD2867DA4800A0466D /* LoginView.swift */; };
+		5677F3DF2867DA4800A0466D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5677F3DD2867DA4800A0466D /* LoginView.swift */; };
+		5677F3E12867DAB900A0466D /* WalletConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5677F3E02867DAB900A0466D /* WalletConnect.swift */; };
+		5677F3E22867DAB900A0466D /* WalletConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5677F3E02867DAB900A0466D /* WalletConnect.swift */; };
+		5677F3E42867F17000A0466D /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5677F3E32867F17000A0466D /* ProjectsView.swift */; };
+		5677F3E52867F17000A0466D /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5677F3E32867F17000A0466D /* ProjectsView.swift */; };
+		5677F3E72867F1AA00A0466D /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5677F3E62867F1AA00A0466D /* SwiftUtils.swift */; };
+		5677F3E82867F1AA00A0466D /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5677F3E62867F1AA00A0466D /* SwiftUtils.swift */; };
 		5679CDFC286664DD003F4D44 /* PearlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5679CDEC286664D9003F4D44 /* PearlApp.swift */; };
 		5679CDFD286664DD003F4D44 /* PearlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5679CDEC286664D9003F4D44 /* PearlApp.swift */; };
 		5679CDFE286664DD003F4D44 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5679CDED286664D9003F4D44 /* ContentView.swift */; };
@@ -32,6 +41,10 @@
 		5630B1AE28676A18004D29F4 /* Pearl (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Pearl (iOS).entitlements"; sourceTree = "<group>"; };
 		5630B1AF28676F13004D29F4 /* Pearl--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Pearl--iOS--Info.plist"; sourceTree = "<group>"; };
 		5630B1B328677DCD004D29F4 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
+		5677F3DD2867DA4800A0466D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5677F3E02867DAB900A0466D /* WalletConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletConnect.swift; sourceTree = "<group>"; };
+		5677F3E32867F17000A0466D /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		5677F3E62867F1AA00A0466D /* SwiftUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUtils.swift; sourceTree = "<group>"; };
 		5679CDEC286664D9003F4D44 /* PearlApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PearlApp.swift; sourceTree = "<group>"; };
 		5679CDED286664D9003F4D44 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5679CDEE286664DD003F4D44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +61,7 @@
 			files = (
 				5630B1A2286757E5004D29F4 /* FirebaseMessaging in Frameworks */,
 				5630B19E286757E5004D29F4 /* FirebaseFunctions in Frameworks */,
+				5677F3DC2867D88E00A0466D /* WalletConnectSwift in Frameworks */,
 				5679CE1028668FED003F4D44 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +97,10 @@
 				5679CDEE286664DD003F4D44 /* Assets.xcassets */,
 				5679CE0B286683C0003F4D44 /* NotificationData.swift */,
 				5630B1B328677DCD004D29F4 /* ToggleView.swift */,
+				5677F3DD2867DA4800A0466D /* LoginView.swift */,
+				5677F3E02867DAB900A0466D /* WalletConnect.swift */,
+				5677F3E32867F17000A0466D /* ProjectsView.swift */,
+				5677F3E62867F1AA00A0466D /* SwiftUtils.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -124,6 +142,7 @@
 				5679CE0F28668FED003F4D44 /* SDWebImageSwiftUI */,
 				5630B19D286757E5004D29F4 /* FirebaseFunctions */,
 				5630B1A1286757E5004D29F4 /* FirebaseMessaging */,
+				5677F3DB2867D88E00A0466D /* WalletConnectSwift */,
 			);
 			productName = "Pearl (iOS)";
 			productReference = 5679CDF3286664DD003F4D44 /* Pearl.app */;
@@ -176,6 +195,7 @@
 			packageReferences = (
 				5679CE0E28668FED003F4D44 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				5630B184286757E5004D29F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				5677F3DA2867D88E00A0466D /* XCRemoteSwiftPackageReference "WalletConnectSwift" */,
 			);
 			productRefGroup = 5679CDF4286664DD003F4D44 /* Products */;
 			projectDirPath = "";
@@ -215,9 +235,13 @@
 			files = (
 				5679CDFE286664DD003F4D44 /* ContentView.swift in Sources */,
 				5679CE0C286683C0003F4D44 /* NotificationData.swift in Sources */,
+				5677F3E42867F17000A0466D /* ProjectsView.swift in Sources */,
 				5630B182286753A8004D29F4 /* PushNotificationsManager.swift in Sources */,
+				5677F3E12867DAB900A0466D /* WalletConnect.swift in Sources */,
+				5677F3E72867F1AA00A0466D /* SwiftUtils.swift in Sources */,
 				5630B1B428677DCD004D29F4 /* ToggleView.swift in Sources */,
 				5679CDFC286664DD003F4D44 /* PearlApp.swift in Sources */,
+				5677F3DE2867DA4800A0466D /* LoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,9 +251,13 @@
 			files = (
 				5679CDFF286664DD003F4D44 /* ContentView.swift in Sources */,
 				5679CE0D286683C0003F4D44 /* NotificationData.swift in Sources */,
+				5677F3E52867F17000A0466D /* ProjectsView.swift in Sources */,
 				5630B183286753A8004D29F4 /* PushNotificationsManager.swift in Sources */,
+				5677F3E22867DAB900A0466D /* WalletConnect.swift in Sources */,
+				5677F3E82867F1AA00A0466D /* SwiftUtils.swift in Sources */,
 				5630B1B528677DCD004D29F4 /* ToggleView.swift in Sources */,
 				5679CDFD286664DD003F4D44 /* PearlApp.swift in Sources */,
+				5677F3DF2867DA4800A0466D /* LoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +537,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		5677F3DA2867D88E00A0466D /* XCRemoteSwiftPackageReference "WalletConnectSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WalletConnect/WalletConnectSwift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		5679CE0E28668FED003F4D44 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
@@ -529,6 +565,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5630B184286757E5004D29F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
+		};
+		5677F3DB2867D88E00A0466D /* WalletConnectSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5677F3DA2867D88E00A0466D /* XCRemoteSwiftPackageReference "WalletConnectSwift" */;
+			productName = WalletConnectSwift;
 		};
 		5679CE0F28668FED003F4D44 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;

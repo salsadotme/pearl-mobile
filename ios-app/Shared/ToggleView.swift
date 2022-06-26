@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 class SubscriptionModel: ObservableObject {
     
@@ -32,12 +33,16 @@ class SubscriptionModel: ObservableObject {
 
 struct ToggleView: View {
     @ObservedObject var model: SubscriptionModel
-
+    
+    @State private var projectToggle = true
     @State private var fakeToggle = true
     
     init() {
         UITableView.appearance().backgroundColor = .clear
         UITableViewCell.appearance().backgroundColor = .clear
+        
+        Theme.navigationBarColors(background: .clear, titleColor: .white)
+        
         self.model = SubscriptionModel()
     }
     
@@ -48,26 +53,50 @@ struct ToggleView: View {
                 .padding([.bottom], 0)
                 .padding([.top], 0)
         }
-        
         .fixedSize(horizontal: false, vertical: true)
-        .frame(height: 56)
+        .frame(height: 30)
+        .tint(Color(hex: 0x1890FF))
     }
     
     var body: some View {
-        return VStack {
-            Text("Select the type of notifications you’d like to receive (you can change this later)")
-                .padding(.horizontal)
-            List {
-                toggleCell(title: "New Drop", isOn: $model.newDropsToggle)
-                toggleCell(title: "Mint allowlist", isOn: $model.allowlistToggle)
-                toggleCell(title: "Utility announcements", isOn: $fakeToggle)
-                toggleCell(title: "Jobs", isOn: $fakeToggle)
-                toggleCell(title: "News coverage", isOn: $fakeToggle)
-                toggleCell(title: "Security", isOn: $fakeToggle)
-                toggleCell(title: "Global announcements", isOn: $fakeToggle)
+        return NavigationView {
+            VStack {
+                Group {
+                    Text("Bullish Bears")
+                        .font(.system(size: 20, weight: .regular, design: .default))
+                        .frame(maxWidth: .infinity, maxHeight: 30, alignment: .leading)
+                    toggleCell(title: "I want to receive notifications for this project", isOn: $projectToggle)
+                        .padding(.vertical)
+                    Divider()
+                        .padding(.horizontal, 10)
+                }
+                .padding(.top, 10)
+                .padding(.horizontal, 29)
+                
+                List {
+                    Section {
+                        toggleCell(title: "New Drop", isOn: $model.newDropsToggle)
+                        toggleCell(title: "Mint allowlist", isOn: $model.allowlistToggle)
+                        toggleCell(title: "Utility announcements", isOn: $fakeToggle)
+                        toggleCell(title: "Jobs", isOn: $fakeToggle)
+                        toggleCell(title: "News coverage", isOn: $fakeToggle)
+                        toggleCell(title: "Security", isOn: $fakeToggle)
+                        toggleCell(title: "Global announcements", isOn: $fakeToggle)
+                    } header: {
+                        Text("Select the type of notifications you’d like to receive (you can change this later)")
+                            .font(.system(size: 17, weight: .light, design: .default))
+                    }
+                    .listRowBackground(Color.clear)
+                }
             }
-        }
-        .background(Color.blue)
+            .navigationTitle("Preferences")
+            .navigationBarTitleDisplayMode(.inline)
+            .background(
+                RadialGradient(gradient: Gradient(colors: [Color(hex: 0x006D75), Color(hex: 0x00474F), Color(hex: 0x22075E)]), center: .topLeading, startRadius: 250, endRadius: 800)
+                
+            )
+        }.foregroundColor(.white)
+        
     }
 }
 

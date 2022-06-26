@@ -38,7 +38,7 @@ private func cell(_ model: NotificationData) -> some View {
                     .padding([.top], 3)
                     .padding([.bottom], 0)
                     .foregroundColor(.blue)
-                .padding([.top], 0)
+                    .padding([.top], 0)
             }
             Image(systemName: "chevron.right").imageScale(.small)
         }
@@ -55,12 +55,15 @@ private func cell(_ model: NotificationData) -> some View {
 
 struct ContentView: View {
     var body: some View {
-        return VStack {
-            List {
-                ForEach(fakeData, id: \.id) { data in
-                    cell(data)
+        return  NavigationView {
+            VStack {
+                List {
+                    ForEach(fakeData, id: \.id) { data in
+                        cell(data)
+                    }
                 }
             }
+            .navigationTitle("Preferences")
         }
     }
 }
