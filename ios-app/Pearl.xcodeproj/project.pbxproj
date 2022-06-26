@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		277A042528682563001B1DDB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 277A042428682563001B1DDB /* FirebaseFirestore */; };
 		5630B182286753A8004D29F4 /* PushNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5630B181286753A8004D29F4 /* PushNotificationsManager.swift */; };
 		5630B183286753A8004D29F4 /* PushNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5630B181286753A8004D29F4 /* PushNotificationsManager.swift */; };
 		5630B19E286757E5004D29F4 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 5630B19D286757E5004D29F4 /* FirebaseFunctions */; };
@@ -68,6 +69,7 @@
 				5630B1A2286757E5004D29F4 /* FirebaseMessaging in Frameworks */,
 				5630B19E286757E5004D29F4 /* FirebaseFunctions in Frameworks */,
 				5677F3DC2867D88E00A0466D /* WalletConnectSwift in Frameworks */,
+				277A042528682563001B1DDB /* FirebaseFirestore in Frameworks */,
 				5679CE1028668FED003F4D44 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +153,7 @@
 				5630B19D286757E5004D29F4 /* FirebaseFunctions */,
 				5630B1A1286757E5004D29F4 /* FirebaseMessaging */,
 				5677F3DB2867D88E00A0466D /* WalletConnectSwift */,
+				277A042428682563001B1DDB /* FirebaseFirestore */,
 			);
 			productName = "Pearl (iOS)";
 			productReference = 5679CDF3286664DD003F4D44 /* Pearl.app */;
@@ -204,6 +207,7 @@
 				5679CE0E28668FED003F4D44 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				5630B184286757E5004D29F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				5677F3DA2867D88E00A0466D /* XCRemoteSwiftPackageReference "WalletConnectSwift" */,
+				277A042328682563001B1DDB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 5679CDF4286664DD003F4D44 /* Products */;
 			projectDirPath = "";
@@ -541,6 +545,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		277A042328682563001B1DDB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		5630B184286757E5004D29F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -568,6 +580,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		277A042428682563001B1DDB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5630B184286757E5004D29F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		5630B19D286757E5004D29F4 /* FirebaseFunctions */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5630B184286757E5004D29F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
