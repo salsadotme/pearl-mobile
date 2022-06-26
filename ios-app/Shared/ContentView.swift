@@ -58,10 +58,30 @@ private func cell(_ model: NotificationData) -> some View {
 struct ContentView: View {
     let db = Firestore.firestore()
     
+    @Environment(\.scenePhase) var scenePhase
+    
     @State private var messages: [NotificationData] = []
     
     init() {
         Theme.navigationBarColors(background: .clear, titleColor: .white)
+    }
+    
+    private func fetch() {
+        db.collection("recipients")
+            .document("0x06e6f7D896696167B2dA9281EbAF8a14580fbFCc")
+            .collection("messages")
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    print(querySnapshot!.count)
+                    messages.removeAll()
+                    for document in querySnapshot!.documents {
+                        //print("\(document.documentID) => \(document.data())")
+                        messages.append(NotificationData(id: document.documentID, title: document.get("title") as! String, content: document.get("body") as! String, senderProfilePhoto: URL(string:  "https://pbs.twimg.com/media/FV4bX_bXkAUJGRu?format=jpg&name=4096x4096")!))
+                    }
+                }
+            }
     }
     
     var body: some View {
@@ -81,19 +101,13 @@ struct ContentView: View {
         }
         .foregroundColor(.white)
         .background(appBackgroundGradient)
-        .onAppear {
-            print("here")
-            db.collection("recipients").document("0x06e6f7D896696167B2dA9281EbAF8a14580fbFCc").collection("messages").getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    print(querySnapshot!.count)
-                    for document in querySnapshot!.documents {
-                        //print("\(document.documentID) => \(document.data())")
-                        messages.append(NotificationData(id: document.documentID, title: document.get("title") as! String, content: document.get("body") as! String, senderProfilePhoto: URL(string:  "https://pbs.twimg.com/media/FV4bX_bXkAUJGRu?format=jpg&name=4096x4096")!))
-                    }
-                }
+        .onChange(of: scenePhase) { newPhase in
+            if newPhase == .active {
+                fetch()
             }
+        }
+        .onAppear {
+            fetch()
         }
     }
 }
