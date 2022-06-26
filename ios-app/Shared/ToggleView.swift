@@ -75,7 +75,7 @@ struct ToggleView: View {
                 toggleCell(title: "New Drop", isOn: $model.newDropsToggle)
                 toggleCell(title: "Mint allowlist", isOn: $model.allowlistToggle)
                 toggleCell(title: "Utility announcements", isOn: $fakeToggle)
-                toggleCell(title: "Jobs", isOn: $fakeToggle)
+                toggleCell(title: "Events", isOn: $fakeToggle)
                 toggleCell(title: "News coverage", isOn: $fakeToggle)
                 toggleCell(title: "Security", isOn: $fakeToggle)
                 toggleCell(title: "Global announcements", isOn: $fakeToggle)
