@@ -74,6 +74,11 @@ struct ContentView: View {
             Spacer()
         }
         .navigationTitle("Inbox")
+        .toolbar {
+            Button("0xZoZoZo") {
+                print("Help tapped!")
+            }.foregroundColor(Color.white.opacity(0.4))
+        }
         .foregroundColor(.white)
         .background(appBackgroundGradient)
         .onAppear {
@@ -95,6 +100,9 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NavigationView {
+            ContentView()
+        }
+        
     }
 }
