@@ -20,7 +20,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, MessagingDelegate {
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         Messaging.messaging().apnsToken = deviceToken
     }
-
+    
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
         if let fcmToken = fcmToken {
             print("Firebase registration token: \(fcmToken)")
@@ -37,12 +37,15 @@ struct PearlApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ProjectsView()
-                .onAppear {
-                    PushNotificationManager.registerForRemoteNotifications {
-                        print("yay!")
+            NavigationView {
+                ContentView()
+                    .onAppear {
+                        PushNotificationManager.registerForRemoteNotifications {
+                            print("yay!")
+                        }
                     }
-                }
+            }
+            
         }
     }
 }

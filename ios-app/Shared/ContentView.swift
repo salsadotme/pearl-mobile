@@ -9,10 +9,9 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 let fakeData: [NotificationData] = [
-    NotificationData(id: "1", title: "Hello World 1", content: "Yet another Messaging Protocol", senderProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/977496875887558661/L86xyLF4_400x400.jpg")!),
-    NotificationData(id: "2", title: "Hello World 2", content: "Yet another Messaging Protocol", senderProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/977496875887558661/L86xyLF4_400x400.jpg")!),
-    NotificationData(id: "3", title: "Hello World 3", content: "Yet another Messaging Protocol", senderProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/977496875887558661/L86xyLF4_400x400.jpg")!),
-    NotificationData(id: "4", title: "Hello World 4", content: "Yet another messaging protocol", senderProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/977496875887558661/L86xyLF4_400x400.jpg")!),
+    NotificationData(id: "1", title: "New partnership with Sofia Vegara", content: "She chose us as the first...", senderProfilePhoto: URL(string: "https://i.imgur.com/v4S8w7k.jpg")!),
+    NotificationData(id: "2", title: "Event at NFT NYC", content: "We are hosting an event for ...", senderProfilePhoto: URL(string: "https://pbs.twimg.com/media/FV4bX_bXkAUJGRu?format=jpg&name=4096x4096")!),
+    NotificationData(id: "3", title: "Whitelist access", content: "We are hosting an event for ...", senderProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/1460869637139271680/d0X1drlC_400x400.jpg")!),
 ]
 
 private func cell(_ model: NotificationData) -> some View {
@@ -30,41 +29,45 @@ private func cell(_ model: NotificationData) -> some View {
                 Text(model.title)
                     .fontWeight(.medium)
                     .lineLimit(2)
-                    .padding([.top], 8)
                     .padding([.bottom], 0)
                 Text(model.content)
-                    .fontWeight(.regular)
+                    .fontWeight(.light)
                     .lineLimit(2)
                     .padding([.top], 3)
                     .padding([.bottom], 0)
-                    .foregroundColor(.blue)
                     .padding([.top], 0)
             }
+            Spacer()
             Image(systemName: "chevron.right").imageScale(.small)
         }
+        .padding()
         .fixedSize(horizontal: false, vertical: true)
         .frame(height: 100)
-        
-        Button(action: {
-            
-        }) {
-            EmptyView()
-        }
+        .background(Color.white.opacity(0.10))
+        .overlay(
+            RoundedRectangle(cornerRadius: 10, style: .circular).stroke(Color.white.opacity(0.25), lineWidth: 1.25)
+        )
+        .clipped()
+        .cornerRadius(10)
+        .padding(.horizontal, 20)
     }
 }
 
 struct ContentView: View {
+    init() {
+        Theme.navigationBarColors(background: .clear, titleColor: .white)
+    }
+    
     var body: some View {
-        return  NavigationView {
-            VStack {
-                List {
-                    ForEach(fakeData, id: \.id) { data in
-                        cell(data)
-                    }
-                }
+        VStack {
+            ForEach(fakeData, id: \.id) { data in
+                cell(data)
             }
-            .navigationTitle("Preferences")
+            Spacer()
         }
+        .navigationTitle("Inbox")
+        .foregroundColor(.white)
+        .background(appBackgroundGradient)
     }
 }
 

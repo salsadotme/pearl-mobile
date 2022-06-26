@@ -24,6 +24,8 @@
 		5677F3E52867F17000A0466D /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5677F3E32867F17000A0466D /* ProjectsView.swift */; };
 		5677F3E72867F1AA00A0466D /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5677F3E62867F1AA00A0466D /* SwiftUtils.swift */; };
 		5677F3E82867F1AA00A0466D /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5677F3E62867F1AA00A0466D /* SwiftUtils.swift */; };
+		5677F3ED2868097000A0466D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5677F3EC2868097000A0466D /* Colors.swift */; };
+		5677F3EE2868097000A0466D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5677F3EC2868097000A0466D /* Colors.swift */; };
 		5679CDFC286664DD003F4D44 /* PearlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5679CDEC286664D9003F4D44 /* PearlApp.swift */; };
 		5679CDFD286664DD003F4D44 /* PearlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5679CDEC286664D9003F4D44 /* PearlApp.swift */; };
 		5679CDFE286664DD003F4D44 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5679CDED286664D9003F4D44 /* ContentView.swift */; };
@@ -45,6 +47,7 @@
 		5677F3E02867DAB900A0466D /* WalletConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletConnect.swift; sourceTree = "<group>"; };
 		5677F3E32867F17000A0466D /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		5677F3E62867F1AA00A0466D /* SwiftUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUtils.swift; sourceTree = "<group>"; };
+		5677F3EC2868097000A0466D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		5679CDEC286664D9003F4D44 /* PearlApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PearlApp.swift; sourceTree = "<group>"; };
 		5679CDED286664D9003F4D44 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5679CDEE286664DD003F4D44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 				5677F3E02867DAB900A0466D /* WalletConnect.swift */,
 				5677F3E32867F17000A0466D /* ProjectsView.swift */,
 				5677F3E62867F1AA00A0466D /* SwiftUtils.swift */,
+				5677F3EC2868097000A0466D /* Colors.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -234,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5679CDFE286664DD003F4D44 /* ContentView.swift in Sources */,
+				5677F3ED2868097000A0466D /* Colors.swift in Sources */,
 				5679CE0C286683C0003F4D44 /* NotificationData.swift in Sources */,
 				5677F3E42867F17000A0466D /* ProjectsView.swift in Sources */,
 				5630B182286753A8004D29F4 /* PushNotificationsManager.swift in Sources */,
@@ -250,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5679CDFF286664DD003F4D44 /* ContentView.swift in Sources */,
+				5677F3EE2868097000A0466D /* Colors.swift in Sources */,
 				5679CE0D286683C0003F4D44 /* NotificationData.swift in Sources */,
 				5677F3E52867F17000A0466D /* ProjectsView.swift in Sources */,
 				5630B183286753A8004D29F4 /* PushNotificationsManager.swift in Sources */,
