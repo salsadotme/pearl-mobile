@@ -31,7 +31,7 @@ struct ProjectsView: View {
         Theme.navigationBarColors(background: .clear, titleColor: .white)
     }
     
-    func cell(project: Project) -> some View {
+    func cell(project: Project, isLast:Bool) -> some View {
         NavigationLink(destination: ToggleView()) {
             VStack {
                 HStack{
@@ -39,9 +39,11 @@ struct ProjectsView: View {
                     Spacer()
                     Image(systemName: "arrow.right")
                 }.padding(20)
-                Divider()
-                    .frame(height: 1.25)
-                    .background(Color.white.opacity(0.25))
+                if (!isLast) {
+                    Divider()
+                        .frame(height: 1.25)
+                        .background(Color.white.opacity(0.25))
+                }
             }
         }
     }
@@ -54,13 +56,19 @@ struct ProjectsView: View {
                     .padding(.bottom, 15)
                 VStack(alignment: .leading, spacing: 0){
                     ForEach(projects, id: \.self) { project in
-                        cell(project: project)
+                        cell(project: project, isLast: project.id == "4")
                     }
                 }
                 .overlay(
                     RoundedRectangle(cornerRadius: 10, style: .circular).stroke(Color.white.opacity(0.25), lineWidth: 1.25)
                 )
                 Spacer()
+                NavigationLink(destination: ContentView()) {
+                    Text("Continue")
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(RoundedRectangle(cornerRadius: 8).fill(Color(hex: 0x1890FF)))
+                }
             }
             .padding()
             .navigationTitle("Your NFTs")
