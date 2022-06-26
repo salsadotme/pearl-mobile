@@ -18,9 +18,9 @@ class SubscriptionModel: ObservableObject {
         }
     }
     
-    @Published var newDropsToggle: Bool = false {
+    @Published var eventsToggle: Bool = false {
         didSet {
-            toggleSubscription(project: "bullish-bears", type: "new-drops", isSubscribed: newDropsToggle)
+            toggleSubscription(project: "bullish-bears", type: "events", isSubscribed: eventsToggle)
         }
     }
     
@@ -68,10 +68,9 @@ struct ToggleView: View {
                 .font(.system(size: 17, weight: .light, design: .default))
                 .frame(alignment: .leading)
             VStack {
-                toggleCell(title: "New Drop", isOn: $model.newDropsToggle)
                 toggleCell(title: "Mint allowlist", isOn: $model.allowlistToggle)
+                toggleCell(title: "Events", isOn: $model.eventsToggle)
                 toggleCell(title: "Utility announcements", isOn: $fakeToggle)
-                toggleCell(title: "Events", isOn: $fakeToggle)
                 toggleCell(title: "News coverage", isOn: $fakeToggle)
                 toggleCell(title: "Security", isOn: $fakeToggle)
                 toggleCell(title: "Global announcements", isOn: $fakeToggle)

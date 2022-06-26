@@ -17,10 +17,9 @@ struct Project: Hashable {
 }
 
 let projects: [Project] = [
-    Project(id: "1", title: "Bullish Bears", content: "Yet another Messaging Protocol", projectProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/977496875887558661/L86xyLF4_400x400.jpg")!),
+    Project(id: "1", title: "Bullish Bears", content: "Yet another Messaging Protocol", projectProfilePhoto: URL(string: "https://firebasestorage.googleapis.com/v0/b/pearl-dev-f60a5.appspot.com/o/dallemini_2022-6-26_2-48-5.png?alt=media")!),
     Project(id: "2", title: "Illuminati", content: "Yet another Messaging Protocol", projectProfilePhoto: URL(string: "https://pbs.twimg.com/media/FV4bX_bXkAUJGRu?format=jpg&name=4096x4096")!),
-    Project(id: "3", title: "Crypto Dates", content: "Yet another Messaging Protocol", projectProfilePhoto: URL(string: "https://i.imgur.com/v4S8w7k.jpg")!),
-    Project(id: "4", title: "FWB", content: "Yet another messaging protocol", projectProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/1496541840341831682/Gtzt5e-K_400x400.png")!),
+    Project(id: "3", title: "Meta Angels", content: "Yet another messaging protocol", projectProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/1469517632688824325/u_qS0ZBy_400x400.jpg")!),
 ]
 
 struct ProjectsView: View {
