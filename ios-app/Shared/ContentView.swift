@@ -11,7 +11,7 @@ import SDWebImageSwiftUI
 let fakeData: [NotificationData] = [
     NotificationData(id: "1", title: "New partnership with Sofia Vegara", content: "She chose us as the first...", senderProfilePhoto: URL(string: "https://i.imgur.com/v4S8w7k.jpg")!),
     NotificationData(id: "2", title: "Event at NFT NYC", content: "We are hosting an event for ...", senderProfilePhoto: URL(string: "https://pbs.twimg.com/media/FV4bX_bXkAUJGRu?format=jpg&name=4096x4096")!),
-    NotificationData(id: "3", title: "Whitelist access", content: "We are hosting an event for ...", senderProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/1460869637139271680/d0X1drlC_400x400.jpg")!),
+    NotificationData(id: "3", title: "Whitelist access", content: "We are hosting an event for ...", senderProfilePhoto: URL(string: "https://pbs.twimg.com/profile_images/1496541840341831682/Gtzt5e-K_400x400.png")!),
 ]
 
 private func cell(_ model: NotificationData) -> some View {
