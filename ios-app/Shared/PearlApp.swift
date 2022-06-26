@@ -37,7 +37,7 @@ struct PearlApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ToggleView()
+            ProjectsView()
                 .onAppear {
                     PushNotificationManager.registerForRemoteNotifications {
                         print("yay!")
