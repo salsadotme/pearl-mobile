@@ -78,7 +78,7 @@ struct ContentView: View {
                     messages.removeAll()
                     for document in querySnapshot!.documents {
                         let maybePhoto = document.get("senderProfilePhoto")
-                        let photo = maybePhoto != nil ? URL(string: maybePhoto as! String) : URL(string: "")
+                        let photo = maybePhoto != nil ? URL(string: maybePhoto as! String) : URL(string: "https://firebasestorage.googleapis.com/v0/b/pearl-dev-f60a5.appspot.com/o/dallemini_2022-6-26_2-48-5.png?alt=media	")
                         messages.append(NotificationData(id: document.documentID, title: document.get("title") as! String, content: document.get("body") as! String, senderProfilePhoto: photo!))
                     }
                 }
