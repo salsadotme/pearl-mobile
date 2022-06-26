@@ -96,7 +96,7 @@ struct ContentView: View {
         }
         .navigationTitle("Inbox")
         .toolbar {
-            Button("0xZoZoZo") {
+            Button("gracew.eth") {
                 print("Help tapped!")
             }.foregroundColor(Color.white.opacity(0.4))
         }
