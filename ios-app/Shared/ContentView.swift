@@ -86,31 +86,42 @@ struct ContentView: View {
             }
     }
     
-    var body: some View {
-        VStack {
-            ForEach(messages, id: \.id) { data in
-                NavigationLink(destination: NotificationDetailsView(notification: data)) {
-                    cell(data)
+    private func content() -> some View {
+        return Group {
+            if (messages.isEmpty) {
+                Text("").frame(maxWidth: .infinity, maxHeight: .infinity)
+            } else {
+                VStack {
+                    ForEach(messages, id: \.id) { data in
+                        NavigationLink(destination: NotificationDetailsView(notification: data)) {
+                            cell(data)
+                        }
+                    }
+                    Spacer()
                 }
             }
-            Spacer()
         }
-        .navigationTitle("Inbox")
-        .toolbar {
-            Button("gracew.eth") {
-                print("Help tapped!")
-            }.foregroundColor(Color.white.opacity(0.4))
-        }
-        .foregroundColor(.white)
-        .background(appBackgroundGradient)
-        .onChange(of: scenePhase) { newPhase in
-            if newPhase == .active {
+        
+    }
+    
+    var body: some View {
+        content()
+            .navigationTitle("Inbox")
+            .toolbar {
+                Button("gracew.eth") {
+                    print("Help tapped!")
+                }.foregroundColor(Color.white.opacity(0.4))
+            }
+            .foregroundColor(.white)
+            .background(appBackgroundGradient)
+            .onChange(of: scenePhase) { newPhase in
+                if newPhase == .active {
+                    fetch()
+                }
+            }
+            .onAppear {
                 fetch()
             }
-        }
-        .onAppear {
-            fetch()
-        }
     }
 }
 

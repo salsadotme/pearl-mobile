@@ -18,7 +18,7 @@ class SubscriptionModel: ObservableObject {
         }
     }
     
-    @Published var eventsToggle: Bool = false {
+    @Published var eventsToggle: Bool = true {
         didSet {
             toggleSubscription(project: "bullish-bears", type: "events", isSubscribed: eventsToggle)
         }
